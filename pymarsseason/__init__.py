@@ -25,7 +25,11 @@ To see the relationship between season and solar longitude,
 """
 import logging.config
 import os
+from logging import debug
+from logging import getLogger
 from logging import NullHandler
+from logging import setLogRecordFactory
+from logging import warning
 
 from astropy.time import Time
 
@@ -44,7 +48,7 @@ from .pymarsseason import Hemisphere
 from .pymarsseason import PyMarsSeason
 from .pymarsseason import Season
 
-logging.getLogger(__name__).addHandler(NullHandler())
+getLogger(__name__).addHandler(NullHandler())
 
 UtilsLogs.add_logging_level("TRACE", 15)
 try:
@@ -53,9 +57,9 @@ try:
         os.path.join(PATH_TO_CONF, "logging.conf"),
         disable_existing_loggers=False,
     )
-    logging.debug(f"file {os.path.join(PATH_TO_CONF, 'logging.conf')} loaded")
+    debug(f"file {os.path.join(PATH_TO_CONF, 'logging.conf')} loaded")
 except Exception as exception:  # pylint: disable=broad-except
-    logging.warning(f"cannot load logging.conf : {exception}")
-logging.setLogRecordFactory(LogRecord)  # pylint: disable=no-member
+    warning(f"cannot load logging.conf : {exception}")
+setLogRecordFactory(LogRecord)  # pylint: disable=no-member
 
 __all__ = ["Time", "Season", "Hemisphere", "PyMarsSeason"]

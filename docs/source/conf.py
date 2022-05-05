@@ -12,7 +12,7 @@
 import os
 import sys
 
-import sphinx_bootstrap_theme
+# import sphinx_bootstrap_theme
 
 sys.path.insert(0, os.path.abspath("../.."))
 
@@ -24,7 +24,7 @@ def skip(app, what, name, obj, would_skip, options):
 
 
 def setup(app):
-    app.add_css_file("my-styles.css")  # also can be a full URL
+    #    app.add_css_file("my-styles.css")  # also can be a full URL
     app.connect("autodoc-skip-member", skip)
 
 
@@ -85,9 +85,9 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_rtd_theme"
 
-html_theme = "bootstrap"
+# html_theme = "bootstrap"
 
 html_logo = "_static/logo.png"
 latex_logo = "_static/logo.png"
