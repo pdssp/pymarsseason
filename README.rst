@@ -26,7 +26,7 @@ To install pyMarsSeason, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install pymarsseason
+    $ pip install git+https://github.com/pole-surfaces-planetaires/pymarsseason.git
 
 This is the preferred method to install pyMarsSeason, as it will always install the most recent stable release.
 
