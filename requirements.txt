@@ -1,0 +1,4 @@
+astropy==5.0.4
+marstime @ git+https://github.com/eelsirhc/pyMarsTime.git#egg=marstime-0.5.2
+setuptools-scm==6.3.2
+types-setuptools==57.4.4
