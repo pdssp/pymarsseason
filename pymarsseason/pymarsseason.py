@@ -22,7 +22,7 @@ class NoValue(Enum):
 class Season(NoValue):
     SPRING = "spring"
     SUMMER = "summer"
-    AUTOMN = "automn"
+    AUTUMN = "autumn"
     WINTER = "winter"
 
 
@@ -84,7 +84,7 @@ class PyMarsSeason:
         if 0 <= lsmars < 90:
             result = {
                 Hemisphere.NORTH: Season.SPRING,
-                Hemisphere.SOUTH: Season.AUTOMN,
+                Hemisphere.SOUTH: Season.AUTUMN,
             }
         elif 90 <= lsmars < 180:
             result = {
@@ -93,7 +93,7 @@ class PyMarsSeason:
             }
         elif 180 <= lsmars < 270:
             result = {
-                Hemisphere.NORTH: Season.AUTOMN,
+                Hemisphere.NORTH: Season.AUTUMN,
                 Hemisphere.SOUTH: Season.SPRING,
             }
         elif 270 <= lsmars < 360:

@@ -115,7 +115,7 @@ def test_season_from_ls_90():
 def test_season_from_ls_180():
     pyseason = PyMarsSeason()
     season = pyseason.convert_ls_to_season(180)
-    assert season[pymarsseason.Hemisphere.NORTH] == pymarsseason.Season.AUTOMN
+    assert season[pymarsseason.Hemisphere.NORTH] == pymarsseason.Season.AUTUMN
 
 
 def test_season_from_ls_270():
