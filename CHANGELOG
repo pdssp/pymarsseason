@@ -1,4 +1,34 @@
-### Improve documentation Add test (HEAD -> main)
+### Update precommit with python3.10 (HEAD -> main)
+>Tue, 16 May 2023 21:21:59 +0200
+
+>Author: Jean-Christophe Malapert (jean-christophe.malapert@cnes.fr)
+
+>Commiter: Jean-Christophe Malapert (jean-christophe.malapert@cnes.fr)
+
+
+
+
+### Update pymarsseason.py (origin/main, origin/HEAD)
+>Tue, 16 May 2023 21:14:39 +0200
+
+>Author: Jean-Christophe Malapert (jean-christophe.malapert@cnes.fr)
+
+>Commiter: GitHub (noreply@github.com)
+
+Change type from numpy.float64 to float
+
+
+### Closes #1 (tag: v1.0.1)
+>Thu, 12 Jan 2023 13:51:33 +0100
+
+>Author: Jean-Christophe Malapert (Jean-christophe.malapert@cnes.fr)
+
+>Commiter: Jean-Christophe Malapert (Jean-christophe.malapert@cnes.fr)
+
+
+
+
+### Improve documentation Add test (tag: v1.0.0)
 >Thu, 5 May 2022 22:30:24 +0200
 
 >Author: Jean-Christophe Malapert (jean-christophe.malapert@cnes.fr)
@@ -8,7 +38,7 @@
 
 
 
-### Update README.rst (origin/main)
+### Update README.rst
 >Thu, 5 May 2022 17:10:49 +0200
 
 >Author: Jean-Christophe Malapert (jean-christophe.malapert@cnes.fr)
