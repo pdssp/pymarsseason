@@ -130,7 +130,7 @@ class PyMarsSeason:
         # convert to J2000
         deltJ2000 = time.jd - 2451545.0
 
-        lsmars = marstime.Mars_Ls(deltJ2000)
+        lsmars = float(marstime.Mars_Ls(deltJ2000))
         logger.debug(f"Solar longitude: {lsmars}")
 
         season: Dict[
