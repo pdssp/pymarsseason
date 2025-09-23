@@ -1,0 +1,7 @@
+Notice
+======
+This project is licensed under the Apache License 2.0.
+
+This project includes code from pyMarsTime (https://github.com/eelsirhc/pyMarsTime),
+which is licensed under the BSD License.
+See LICENSES/BSD-LICENSE.txt for details.

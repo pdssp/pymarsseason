@@ -1,0 +1,86 @@
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[project]
+name = "pymarsseason"
+readme = "README.rst"
+description = "Computes the season based on the solar longitude"
+authors = [{name="Jean-Christophe Malapert", email="jean-christophe.malapert@cnes.fr"}, ]
+license = "Apache-2.0"
+packages = [{include = "pymarsseason"}]
+homepage = "https://github.com/pdssp/pymarsseason"
+version = "1.0.3"
+requires-python = ">=3.12"
+dynamic = ["dependencies"]
+
+[project.scripts]
+pymarsseason = "pymarsseason.__main__:run"
+
+[tool.poetry]
+packages = [{include = "pymarsseason"}]
+include = [
+    { path = "AUTHORS.rst", format = "sdist" },
+    { path = "CHANGELOG", format = "sdist" },
+    { path = "CONTRIBUTING.rst", format = "sdist" },
+    { path = "docker/*", format = "sdist" },
+    { path = "docs/*", format = "sdist" },
+    { path = "LICENSE", format = "sdist"},
+    { path = "Makefile", format = "sdist"},
+    { path = ".pre-commit-config.yaml", format = "sdist"},
+    { path = "pyproject.toml", format = "sdist"},
+    { path = "README.rst", format = "sdist"},
+    { path = "scripts/*", format = "sdist"},
+    { path = "tests/*", format = "sdist"},
+    { path = "tox.ini", format = "sdist"},
+    { path = ".dockerignore", format = "sdist"},
+    { path = ".flake8", format = "sdist"},
+    { path = ".gitignore", format = "sdist"}
+]
+
+[tool.poetry.dependencies]
+toml = "^0.10.2"
+loguru = "^0.7.2"
+astropy = "^7.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.8.0"
+pre-commit-hooks = "^4.6.0"
+flit = "^3.9.0"
+flit-core = "^3.9.0"
+black = "^24.8.1"
+coverage = "^7.6.1"
+flake8 = "^7.1.1"
+mccabe = "^0.7.0"
+mypy = "^1.8.0"
+mypy-extensions = "^1.0.0"
+pylint = "^3.0.3"
+pytest = "^8.3.2"
+tox = "^4.12.1"
+Sphinx = "^7.2.6"
+pip-licenses = "^5.0.0"
+sphinx_rtd_theme = "^2.0.0"
+sphinx-bootstrap-theme = "^0.8.1"
+sphinxcontrib-plantuml = "^0.27"
+pytest-html = "^4.1.1"
+dockerfile-parse = "^2.0.1"
+pytest-mock = "^3.14.0"
+docker = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
